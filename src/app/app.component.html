@@ -1,4 +1,4 @@
 <div>
   <label>ReceiverName</label>
-  <input type="text" (input)="onReceiverChanged($any($event.target).value)">{{receiverText}}
+  <input type="text" (input)="onReceiverChanged($any($event.target).value)">{{receiverText | titlecase }}
 </div>
