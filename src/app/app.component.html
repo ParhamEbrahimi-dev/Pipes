@@ -3,7 +3,7 @@
   <div class="row">
     <div class="form-group col"><br/>
       <label>ReceiverName</label><br/>
-      <input type="text" (input)="onReceiverChanged($any($event.target).value)">
+      <input type="text" class="form-control" (input)="onReceiverChanged($any($event.target).value)">
     </div>  
     <div class="col"><br/>
       <label>ReceiverName</label><br/>
@@ -14,11 +14,22 @@
   <div class="row">
     <div class="form-group col"><br/>
       <label>PaymentDate</label><br/>
-      <input type="date" (input)="onPaymentDateChanged($any($event.target).value)">
+      <input type="date" class="form-control" (input)="onPaymentDateChanged($any($event.target).value)">
     </div>  
     <div class="col"><br/>
       <label>PaymentDate</label><br/>
       {{paymentDateText | date : 'longDate'}}
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="form-group col"><br/>
+      <label>Amount</label><br/>
+      <input type="text" class="form-control" (input)="onAmountChanged($any($event.target).value)">
+    </div>  
+    <div class="col"><br/>
+      <label>Amount</label><br/>
+      {{amountText | currency : 'CAD' : 'symbol' : '.1-2' }}
     </div>  
   </div>
 
