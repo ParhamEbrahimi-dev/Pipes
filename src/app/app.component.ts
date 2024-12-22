@@ -10,7 +10,12 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'Pipes';
   receiverText='';
+  paymentDateText : string ='';
+
   onReceiverChanged(value:string){
-this.receiverText=value;
+    this.receiverText=value;
+  }
+  onPaymentDateChanged(value:string){
+    this.paymentDateText=value;
   }
 }
