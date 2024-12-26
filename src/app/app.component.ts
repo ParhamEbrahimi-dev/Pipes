@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ConvertPipe } from './convert.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [CommonModule,ConvertPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,6 +14,8 @@ export class AppComponent {
   paymentDateText : string ='';
   amountText : string ="";
   heightText : number = 0;
+  mileText : number = 0;
+
   car={
     Company : "BMW",
     Year : 2018,
@@ -31,5 +34,8 @@ export class AppComponent {
   }
   onHeightChanged(value:number){
     this.heightText=value;
+  }
+  onMileChanged(value:number){
+    this.mileText=value;
   }
 }
