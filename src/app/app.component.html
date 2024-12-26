@@ -33,6 +33,18 @@
     </div>  
   </div>
 
+  <div class="row">
+    <div class="form-group col"><br/>
+      <label>Height</label><br/>
+      <input type="text" class="form-control" (input)="onHeightChanged($any($event.target).value)">
+    </div>  
+    <div class="col"><br/>
+      <label>Height</label><br/>
+      {{heightText | number :  '3.1-2' }}
+    </div>  
+  </div>
+  {{car | json}}
+
 </div>
 
 <div>
